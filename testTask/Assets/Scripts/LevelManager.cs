@@ -1,28 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject towerPrefab;
-
-    public GameObject TowerPrefab { 
-        get { 
-
-            return towerPrefab; 
-        } 
+    private int money;
+    public int Money { 
+        get => money;
+        set { 
+            this.moneyTxt.text = "Money: " + value.ToString(); 
+            this.money = value; 
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private TextMeshProUGUI moneyTxt;
+
+ 
+
+    public void Start()
     {
+        Money = 999;
+    }
+    public void BuyTower() {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
- 
-    }
 }

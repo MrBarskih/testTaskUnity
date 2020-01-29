@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
+    //massiv of waypoints 
     public Transform[] waypoints;
 
     void Start()
